@@ -15,7 +15,7 @@
 	var btnOpenModal = $(".qd-smart-newsletter-btn-call");
 
 	btnOpenModal.find(".qd-smart-newsletter-btn-call-modal-newsletter").click(function() {
-		_QD_SN.render();
+		_QD_SN.render({force: false});
 	});
 
 	$(".qd-smart-newsletter-btn-call-modal-newsletter-close").click(function(event) {
