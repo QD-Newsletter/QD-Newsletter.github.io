@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <title>NewsLetter</title>
+    <link href="../-arquivos/css/CSS.newsletter-bootstrap-common.css" rel="stylesheet">
+    <link href="css/newsletter.css" rel="stylesheet">
+
+    <script src="//code.jquery.com/jquery-1.12.4.min.js" type="text/javascript"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="../-arquivos/js-min/JS.jquery.validate.min.js"></script>
+    <script src="../-arquivos/js-min/JS.jquery.mask.min.js"></script>
+    <script src="../-arquivos/js-min/jquery.serializeObject.min.js"></script>
+    <script src="js-min/functions.min.js"></script>
+</head>
+<body>
+    <div class="qd-v1-modal-newsletter modal fade">
+        <div class="modal-dialog modal-lg">
+            <span class="content-close" data-dismiss="modal">&#10006;</span>
+
+            <div class="modal-content">
+                <div class="modal-body">
+                    <form novalidate="1">
+                        <div class="row">                            
+                            <div class="col-xs-12">
+                                <div class="qd_news">
+                                    <div class="form-text">
+                                        <h3>Subscreva a nossa <strong>newsletter</strong></h3>
+                                        <p>Seja o primeiro a saber das oportunidades que temos para si! Esteja sempre a par dos nossos incomparáveis descontos.</p>
+                                    </div>
+
+                                    <div class="form-row">
+                                        <label class="qd-news-label" for="qd_name">Nome</label>
+                                        <input class="qd_news_name form-control required" id="qd_name" name="qd_name" placeholder="Nome" type="text" />
+                                    </div>
+
+                                    <div class="form-row">
+                                        <label class="qd-news-label" for="qd_email">Email</label>
+                                        <input class="qd_news_email email form-control required" id="qd_email" name="qd_email" placeholder="E-mail" type="text" />
+                                    </div>
+
+                                    <div class="form-row">
+                                        <button class="qd_news_button" type="submit">Subscrever</button>
+                                    </div>
+                                </div>
+
+                                <div class="qd_news qd_news_success">
+                                    <h3>Sua inscrição foi realizada com sucesso!</h3>
+                                    <p>Obrigado por se inscrever em nossa newsletter. Em breve você receberá e-mails com nossas ofertas e promoções.</p>
+
+                                    <div class="form-row">
+                                        <button class="qd_news_button" type="button" data-dismiss="modal">Continuar navegando</button>                                       
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
