@@ -1,0 +1,98 @@
+/*
+## Estilos de SKU
+```
+<p>.sku-radio-in-list() Função para sku padrão da loja</p>
+<ul>
+	<li class="select skuList item-dimension-Selecioneotamanho sku-radio-in-list"><span class="group_0"><input type="radio" name="29_Selecioneotamanho" dimension="Selecioneotamanho" data-value="P" data-dimension="Selecione o Tamanho" class="skuselector-specification-label input-dimension-Selecioneotamanho sku-selector skuespec_P change-image" id="29_Selecioneotamanho_0" value="P" specification="P"><label for="29_Selecioneotamanho_0" class="dimension-Selecioneotamanho espec_0 skuespec_P skuespec_Selecione-o-Tamanho_opcao_P skuespec_Selecioneotamanho_opcao_P">P</label><input type="radio" name="29_Selecioneotamanho" dimension="Selecioneotamanho" data-value="M" data-dimension="Selecione o Tamanho" class="skuselector-specification-label input-dimension-Selecioneotamanho sku-selector skuespec_M change-image" id="29_Selecioneotamanho_1" value="M" specification="M"><label for="29_Selecioneotamanho_1" class="dimension-Selecioneotamanho espec_0 skuespec_M skuespec_Selecione-o-Tamanho_opcao_M skuespec_Selecioneotamanho_opcao_M">M</label><input type="radio" name="29_Selecioneotamanho" dimension="Selecioneotamanho" data-value="G" data-dimension="Selecione o Tamanho" class="skuselector-specification-label input-dimension-Selecioneotamanho sku-selector skuespec_G change-image checked sku-picked" id="29_Selecioneotamanho_2" value="G" specification="G" checked="checked"><label for="29_Selecioneotamanho_2" class="dimension-Selecioneotamanho espec_0 skuespec_G skuespec_Selecione-o-Tamanho_opcao_G skuespec_Selecioneotamanho_opcao_G checked sku-picked">G</label></span></li>
+</ul>
+
+<p>.sku-radio-in-list-color() Função para sku de color</p>
+<ul>
+	<li class="select skuList sku-radio-in-list-color item-dimension-Cor"><span class="group_0"><input type="radio" name="40_Cor" dimension="Cor" data-value="Rosa" data-dimension="Cor" class="skuselector-specification-label input-dimension-Cor sku-selector skuespec_Rosa change-image checked sku-picked" id="40_Cor_0" value="Rosa" specification="Rosa" checked="checked"><label for="40_Cor_0" class="dimension-Cor espec_0 skuespec_Rosa skuespec_Cor_opcao_Rosa skuespec_Cor_opcao_Rosa checked sku-picked">Rosa</label></span></li>
+</ul>
+
+```
+*/
+
+
+.sku-radio-in-list() {
+	 margin-bottom: 15px;
+
+	span {
+		display: block;
+		line-height: 0;
+
+		> label {
+			font-size: @font-size-xs;
+			color: @black;
+			font-weight: @normal;
+			border-radius:4px;
+			padding: 0;
+			margin-right: 13px;
+			cursor: pointer;
+			background: @white;
+			cursor: pointer;
+			text-transform: uppercase;
+			.border(@neutral-1-400);
+			.transition();
+			.size(40px, 40px);
+			.line-height(40px);
+			text-align: center;
+
+			&:hover{
+				background: @color-1-500;
+				color: @white;
+				border-color: transparent;
+			}
+
+			&.item_unavailable{
+				background: @color-6-200;
+				color: @neutral-1-400;
+				text-decoration: line-through;
+				box-shadow: none;
+				.border(@neutral-1-300);
+			}
+
+			&.sku-picked {
+				background: @color-1-500!important;
+				box-shadow: 0 2px 0px @color-1-700 inset;
+				color: @white!important;
+				border-color: transparent;
+			}
+		}
+
+	}
+
+	input[type="radio"]{
+		.fixed(-9999pc);
+	}
+}
+
+.sku-radio-in-list-color() {
+	span {
+		display: block;
+		line-height: 0;
+
+		> label {
+			.size(auto, 40px);
+			.line-height(40px);
+			padding: 0 10px;
+
+			&.item_unavailable {
+				background: @color-6-200;
+				color: @neutral-1-400;
+				text-decoration: line-through;
+				box-shadow: none;
+
+				&:after {
+					content: "";
+					display: none;
+				}
+			}
+		}
+
+		input[type="radio"]{
+			.fixed(-9999pc);
+		}
+	}
+}

@@ -1,0 +1,200 @@
+.qd-v1-modal-newsletter {
+	color: @white;
+
+	.modal-footer,
+	.modal-header {
+		display: none;
+	}
+
+	.modal-body {
+		padding: 0;
+	}
+
+	.modal-dialog {
+		max-width: 550px;
+		background: url("../../-arquivos/images/ajax-loader.gif") no-repeat center @white;
+		display: block;
+		border-radius: 0;
+		margin: 10px auto;
+		width: 90%;
+	}
+
+	.modal-content {
+		margin-top: 66px;
+		border: 0;
+		background: url("../../millionline-com-br/images/qd-newsletter-bg-2.jpg") no-repeat 0 0 @color-1-500;
+		background-color: @color-6-500;
+		width: 100%;
+		min-height: 485px;
+		border-radius: 0;
+		position: relative;
+
+		@media (max-width: @screen-xs-max) {
+			&:before {
+				content: "";
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				display: block;
+				background: rgba(0, 0, 0, 0.51);
+				width: 100%;
+			}
+		}
+	}
+
+	form {
+		min-height: 485px;
+
+		@media (max-width: @screen-xs-max) {
+			padding: 7px 7px 0;
+		}
+	}
+
+	.qd_news_success {
+		display: none;
+		padding-top: 31px !important;
+		margin-top: 93px;
+		text-transform: uppercase;
+		text-align: center;
+
+		h3 {
+			font-size: @font-size-lg;
+		}
+
+		p {
+			margin-top: 15px;
+			font-size: @font-size-xs;
+		}
+	}
+
+	.qd-form-success {
+		.qd_news {
+			display: none;
+		}
+
+		.qd_news_success {
+			display: block;
+			padding: 15px 15px!important;
+		}
+	}
+
+	.qd-coupon {
+	}
+
+	.qd-content-coupon {
+		background: @white;
+		margin: 5px 0 19px;
+		color: @black;
+		font-weight: 700;
+		text-align: center;
+		min-height: 24px;
+		line-height: 24px;
+	}
+
+	.form-image-text {
+		margin-top: 45px;
+		margin-left: 69px;
+		margin-bottom: 17px;
+
+		@media (max-width: @screen-xs-max) {
+			display: block;
+			width: 100%;
+			text-align: center;
+			margin-top: 10px;
+			margin-bottom: 5px;
+			margin-left: 0;
+		}
+	}
+
+	.qd_news {
+		background: rgba(53, 18, 38, 0.79);
+		margin-left: 25px;
+		max-width: 299px;
+		width: 90%;
+		padding: 14px 23px 36px;
+		margin-bottom: 10px;
+
+		@media (max-width: @screen-xs-max) {
+			margin: 0 auto;
+		}
+	}
+
+	.form-text {
+		p {
+			line-height: 1.2;
+			font-size: @font-c-4;
+			margin-bottom: 7px;
+		}
+	}
+
+	input[type="text"] {
+		border-radius: 0;
+		background: transparent;
+		.border(@white);
+		color: @white;
+		outline: none !important;
+		box-shadow: none !important;
+		height: 24px;
+		margin-bottom: 6px;
+		padding: 0 12px;
+
+		&.error {
+			border-color: @error-1;
+		}
+	}
+
+	.qd_news_button {
+		background: transparent;
+		outline: none !important;
+		box-shadow: none !important;
+		color: @white;
+		border: none;
+		padding: 0;
+		float: right;
+		text-transform: uppercase;
+	}
+
+	.form-text-extra {
+		font-size: @font-size-h6;
+		margin-left: 21px;
+
+		@media (max-width: @screen-xs-max) {
+			max-width: 272px;
+			width: 100%;
+			text-align: center;
+			margin: 0 auto;
+		}
+	}
+
+	.content-close {
+		position: absolute;
+		right: 19px;
+		bottom: 2px;
+		cursor: pointer;
+
+		@media (max-width: @screen-xs-max) {
+			position: absolute;
+			right: 50%;
+			margin-right: -85px;
+			top: 106%;
+			background: @white;
+			height: 37px;
+			padding: 7px;
+			border-radius: 4px;;
+		}
+	}
+
+	.content-close-2 {
+		cursor: pointer;
+		position: absolute;
+		top: -6px;
+		right: 0;
+
+		i {
+			font-size: @font-size-xlg;
+			position: relative;
+			top: 4px;
+			padding-left: 7px;
+		}
+	}
+}

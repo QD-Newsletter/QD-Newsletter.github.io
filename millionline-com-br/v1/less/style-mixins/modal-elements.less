@@ -1,0 +1,51 @@
+/*
+# MIXINS - ESTILO RELACIONADO AO MODAL.
+*/
+
+// Overlay de fundo
+.modal-backdrop() {
+	.fixed(0,0);
+	background-color: @black;
+	bottom: 0;
+	right: 0;
+	z-index: 9999999;
+	.opacity(0.5);
+}
+
+// Div que permitira a rolagem do modal e não da página
+.modal(){
+	.fixed(0,0);
+	bottom: 0;
+	right: 0;
+	z-index: 1050;
+	outline: 0 none;
+	overflow-x: auto;
+	overflow-y: scroll;
+}
+
+// Div Wrap do modal
+.modal-dialog() {
+	margin: 30px auto;
+	width: 600px;
+}
+
+// Conteúdo do modal
+.modal-content() {
+	background-clip: padding-box;
+	background-color: @white;
+	border-radius: 6px;
+	outline: 0 none;
+	position: relative;
+  	box-shadow: 0 5px 15px fade(@black, 5%);
+}
+
+.close-btn-sidebar(){
+	.btn();
+	padding:5px;
+	font-size: @font-size-lg;
+	text-align: center;
+	line-height: 1;
+	&:before{
+		.font-ico("\f057");
+	}
+}
