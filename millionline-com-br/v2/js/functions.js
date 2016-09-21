@@ -19,7 +19,7 @@
 		// Fomulário
 		var form = $('form');
 		var jsnomeLoja = 'millionline';
-		var entity = 'NL';
+		var entity = 'NB';
 		var emailInput = form.find("[name=qd_email]");
 
 		// Não alterar aqui
