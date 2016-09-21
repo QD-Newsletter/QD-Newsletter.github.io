@@ -1,0 +1,20 @@
+html,
+body {
+	background: transparent;
+	font-family: @main-font;
+}
+
+form.qd-loading {
+	position: relative;
+
+	&:before {
+		content: "";
+		background: url("//qd-newsletter.github.io/-arquivos/images/ajax-loader.gif") no-repeat center center @white;
+		.absolute(0, 0);
+		.size(100%, 100%);
+		z-index: 99;
+		display: block;
+		border-radius: 6px;
+		.opacity(0.5);
+	}
+}

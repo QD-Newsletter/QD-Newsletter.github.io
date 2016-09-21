@@ -1,0 +1,46 @@
+// Loading para o body jsFullLoaded
+.jsFullLoaded(@bodyClass) {
+	@class: ~"@{bodyClass}";
+	@fullClass: ~"body@{bodyClass}";
+
+	.jsFullLoadedStyle(@class, @fullClass);
+}
+
+.jsFullLoaded() {
+	.jsFullLoadedStyle();
+}
+
+.jsFullLoadedStyle(@bodyClass: "", @class: "") {
+	@fullClass: ~"body.jsFullLoaded@{bodyClass}";
+	@singleClass: ~"@{class}";
+
+	@{singleClass} &{
+		background-image: url("/arquivos/Loading_Mizuno.gif");
+		background-repeat: no-repeat;
+		background-position: center center;
+		min-height: 64px;
+	}
+
+	@{fullClass} &{
+		background-image: none;
+		min-height: auto;
+	}
+
+	@{singleClass} & >*{
+		opacity: 0.01;
+		filter: alpha(opacity=1);
+	}
+
+	@{fullClass} & >*{
+		opacity: 1;
+		filter: alpha(opacity=100);
+	}
+}
+
+.wrapperLoading(){
+	.loading-bg();
+
+	>*{
+		.opacity(0.01);
+	}
+}

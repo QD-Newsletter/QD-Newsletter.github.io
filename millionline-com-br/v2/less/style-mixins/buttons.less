@@ -1,0 +1,470 @@
+/*
+## Estilo de Botões
+```
+<p>Função ".btn-1(@bg-color: @neutral-1-100, @font-color: @neutral-1-500)"</p>
+<p>*Indicado para botões neutros.</p>
+<input type="button" value="Teste" class="btn-1" />
+
+<p>Função ".btn-2(@bg-color: @color-4-500, @font-color: @white)"</p>
+<p>*Indicado para botões secundários</p>
+<input type="button" value="Teste" class="btn-2" />
+
+<p>Função .btn-3(@bg-color: @color-3-500, @font-color: @white, @border-radius: 13px 0px 13px 0)"</p>
+<p>*Indicado para botões de vitrine, em especial essa função recebe o parâmentro de @border-radius, que vem com o valor "13px 0px 13px 0", pré definido</p>
+<input type="button" value="Teste" class="btn-3" />
+
+
+<p>Obs: Por padrão todas as funções de btn tem como parâmentro (@bg-color: background do botão) e (@font-color: cor da font)</p>
+
+<p>Função ".btn-icon-bg-left(@sprite: "/arquivos/cel.sprite.inputs.png", @sprite-possition: 3px -150px)", inserirá um background image no botão ao lado esquerdo. </p>
+<input type="button" value="Teste" class="btn-3 btn-icon-bg-left" />
+
+<p>Função ".btn-icon-bg-right(@sprite: "/arquivos/cel.sprite.inputs.png", @sprite-possition: 96% -150px)", inserirá um background image no botão ao lado direito. </p>
+<input type="button" value="Teste" class="btn-3 btn-icon-bg-right" />
+
+<p>Função ".btn-icon-left(@icon: "\f07a")", inserirá um icone no botão ao lado esquerdo. </p>
+<a class="btn-3 btn-icon-left">Teste</a>
+
+<p>Função ".btn-icon-right(@icon: "\f07a")", inserirá um icone no botão ao lado direito. </p>
+<a class="btn-3 btn-icon-right">Teste</a>
+
+<p>Função ".link", função destinada a estilo de link como cor (hover, active, focus e disabled). </p>
+<p>Parâmentros: .link(@link-color: @color-6-200, @link-active-color: @color-4-500, @text-decoration: underline, @text-decoration-hover: @text-decoration)</p>
+<ul>
+<li>@link-color = Cor do link</li>
+<li>@link-active-color = Cor do focus e active</li>
+<li>@text-decoration = Define se vai ter um text-decoration ou não</li>
+<li>@text-decoration-hover = Define se vai ter um text-decoration ou não no hover</li>
+</ul>
+<a class="link">Teste</a>
+
+
+<p>Função ".btn-icon-right(@icon: "\f07a")", inserirá um icone no botão ao lado direito. </p>
+<a class="btn-3 btn-icon-right">Teste</a>
+
+<p>Função ".btn-slider", função destinada a estilo de botão dos slider </p>
+<p>Parâmentros: .btn-slider(@bg-color: @neutral-1-500) </p>
+
+<ul>
+<li>@bg-color = background do botão</li>
+</ul>
+
+<div style="position: relative">
+<a class="btn-slider next"></a>
+<a class="btn-slider prev"></a>
+</div>
+
+<p>Função .btn-double-ico(@bg-color: @color-3-500, @font-color: @white, @icon-left: "\f07a", @icon-right: "\f07a"), botao com icóne nos dois lados</p>
+<a class="btn-double-ico">Teste</a>
+
+```
+*/
+
+.btn-reset(){
+	box-shadow: none;
+	text-shadow:none;
+	border: none;
+	border-radius: 0;
+	padding:0;
+	text-align: center;
+	outline: none;
+	display: inline-block;
+	cursor: pointer;
+	.transition();
+	&:hover{
+		text-decoration: none;
+		outline: none;
+	}
+	&:focus,
+	&:active{
+		text-decoration: none;
+		outline: none;
+		box-shadow: none;
+	}
+	&[disabled]{
+		.opacity(0.8);
+	}
+}
+
+.btn-1(@bg-color: @neutral-1-100, @font-color: @neutral-1-500) {
+	.btn-reset();
+	.border(@neutral-1-300,1px);
+	font-weight: 400;
+	color: @font-color;
+	background: @bg-color;
+	padding: 5px 9px 4px 10px;
+	border-radius: 4px;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: @font-size-xs;
+	cursor: pointer;
+	display: inline-block;
+	box-shadow: none;
+	text-shadow: none;
+
+	&:hover,
+	&:focus{
+		color: @font-color;
+		background: lighten(@bg-color, 10%);
+		text-decoration: none;
+		box-shadow: 0 -3px 2px @bg-color inset;
+		outline: none;
+	}
+
+	&:active{
+		color: @font-color;
+		background: darken(@bg-color, 4%);
+		text-decoration: none;
+		box-shadow: 0 3px 2px darken(@bg-color, 15%) inset;
+		outline: none;
+	}
+
+	&:disabled,
+	&.disabled {
+		background: @neutral-1-200;
+		.border(@neutral-1-300,1px);
+		color: @neutral-1-300;
+		box-shadow: 0 2px 2px darken(@neutral-1-200, 7%) inset;
+	}
+}
+
+.btn-2(@bg-color: @color-4-500, @font-color: @white) {
+	.btn-reset();
+	.transition();
+	border: none;
+	color: @font-color;
+	background: @bg-color;
+	padding: 11px 12px 11px;
+	border-radius: 4px;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: @font-size-sm;
+	font-weight: @bold;
+	cursor: pointer;
+	display: inline-block;
+	box-shadow: 0 2px 0 lighten(@bg-color, 10%) inset;
+
+	&:hover,
+	&:focus{
+		color: @font-color;
+		background: lighten(@bg-color, 10%);
+		text-decoration: none;
+		box-shadow: 0 -3px 0px @bg-color inset;
+		outline: none;
+	}
+
+	&:active{
+		color: @font-color;
+		background: darken(@bg-color, 4%);
+		text-decoration: none;
+		box-shadow: 0 2px 0px darken(@bg-color, 15%) inset;
+		outline: none;
+	}
+
+	&:disabled,123quatro
+	&.disabled {
+		background: @neutral-1-400;
+		.border(@neutral-1-400,1px);
+		color: @white;
+		box-shadow: none;
+	}
+}
+
+.btn-3(@bg-color: @color-3-500, @font-color: @white, @border-radius: 4px) {
+	.btn-reset();
+	.transition();
+	border: none;
+	color: @font-color;
+	padding: 13px 16px;
+	border-radius: @border-radius;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: @font-size-xs;
+	cursor: pointer;
+	display: inline-block;
+	background: @bg-color;
+	background: -moz-linear-gradient(top,  @bg-color 0%, @color-1-500 100%);
+	background: -webkit-linear-gradient(top,  @bg-color 0%,@color-1-500 100%);
+	background: linear-gradient(to bottom,  @bg-color 0%,@color-1-500 100%);
+	box-shadow: 0 2px 0 lighten(@bg-color, 5%) inset;
+
+	&:hover,
+	&:focus{
+		color: @font-color;
+		background: lighten(@bg-color, 10%);
+		background: -moz-linear-gradient(top,  lighten(@bg-color, 10%) 0%, @color-1-500 100%);
+		background: -webkit-linear-gradient(top,  lighten(@bg-color, 10%) 0%, @color-1-500 100%);
+		background: linear-gradient(to bottom,  lighten(@bg-color, 10%) 0%, @color-1-500 100%);
+		text-decoration: none;
+		outline: none;
+	}
+
+	&:active{
+		color: @font-color;
+		background: darken(@bg-color, 4%);
+		background: -moz-linear-gradient(top,  darken(@bg-color, 4%) 0%, @color-1-500 100%);
+		background: -webkit-linear-gradient(top,  darken(@bg-color, 4%) 0%, @color-1-500 100%);
+		background: linear-gradient(to bottom,  darken(@bg-color, 4%) 0%, @color-1-500 100%);
+		text-decoration: none;
+		outline: none;
+	}
+
+	&:disabled,
+	&.disabled {
+		background: @neutral-1-400;
+		.border(@neutral-1-400,1px);
+		color: @white;
+		box-shadow: none;
+	}
+}
+
+.btn-link-slider(@bg-color: @color-3-500, @bg-color-2: @color-1-500, @font-color: @white, @border-radius: 4px) {
+	.transition();
+	border: none;
+	color: @font-color;
+	padding: 12px 43px;
+	border-radius: @border-radius;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: @font-c-3;
+	cursor: pointer;
+	display: inline-block;
+	background: @bg-color;
+	background: -moz-linear-gradient(top,  @bg-color 0%, @bg-color-2 100%);
+	background: -webkit-linear-gradient(top,  @bg-color 0%,@bg-color-2 100%);
+	background: linear-gradient(to bottom,  @bg-color 0%,@bg-color-2 100%);
+	box-shadow: 0 2px 0 lighten(@bg-color, 15%) inset;
+	font-weight: 600;
+
+	&:hover,
+	&:focus{
+		color: @font-color;
+		background: lighten(@bg-color, 10%);
+		background: -moz-linear-gradient(top,  lighten(@bg-color, 10%) 0%, @bg-color-2 100%);
+		background: -webkit-linear-gradient(top,  lighten(@bg-color, 10%) 0%, @bg-color-2 100%);
+		background: linear-gradient(to bottom,  lighten(@bg-color, 10%) 0%, @bg-color-2 100%);
+		text-decoration: none;
+		outline: none;
+	}
+
+	&:active{
+		color: @font-color;
+		background: darken(@bg-color, 4%);
+		background: -moz-linear-gradient(top,  darken(@bg-color, 4%) 0%, @bg-color-2 100%);
+		background: -webkit-linear-gradient(top,  darken(@bg-color, 4%) 0%, @bg-color-2 100%);
+		background: linear-gradient(to bottom,  darken(@bg-color, 4%) 0%, @bg-color-2 100%);
+		text-decoration: none;
+		outline: none;
+	}
+
+	&:disabled,
+	&.disabled {
+		background: @neutral-1-400;
+		.border(@neutral-1-400,1px);
+		color: @white;
+		box-shadow: none;
+	}
+}
+
+.btn-icon-bg-left(@sprite: "/arquivos/cel.sprite.inputs.png", @sprite-possition: 3px -149px) {
+	background-image: url(@sprite)!important;
+	background-position:  @sprite-possition!important;
+	background-repeat: no-repeat!important;
+	padding-left: 26px;
+}
+
+.btn-icon-bg-right(@sprite: "/arquivos/cel.sprite.inputs.png", @sprite-possition: 97% -149px) {
+	background-image: url(@sprite)!important;
+	background-position: @sprite-possition!important;
+	background-repeat: no-repeat!important;
+	padding-right: 26px;
+}
+
+.btn-icon-left(@icon: "\f07a") {
+	padding-left: 13px;
+	padding-right: 21px;
+
+	&:before {
+		.font-ico(@icon);
+		font-size: @font-size-xlg;
+		margin-right: 11px;
+		margin-left: 4px;
+		line-height: 1;
+		position: relative;
+		top: 2px;
+	}
+}
+
+.btn-icon-right(@icon: "\f07a") {
+	padding-left: 21px;
+	padding-right: 13px;
+
+	&:after {
+		.font-ico(@icon);
+		font-size: @font-size-xlg;
+		margin-right: 4px;
+		margin-left: 11px;
+		line-height: 1;
+		position: relative;
+		top: 2px;
+	}
+}
+
+.link(@link-color: @color-6-200, @link-active-color: @color-4-500, @text-decoration: underline, @text-decoration-hover: @text-decoration) {
+	color:@link-color;
+
+	&:hover{
+		color: lighten(@link-color, 10%);
+		text-decoration: @text-decoration-hover;
+	}
+
+	&:active,
+	&:focus{
+		color: @link-active-color;
+		outline: none;
+		text-decoration: @text-decoration;
+	}
+
+	&:disabled,
+	&.disabled {
+		color: @neutral-1-300;
+		box-shadow: none;
+	}
+}
+
+.btn-slider(@bg-color: @white, @txt-color: @color-1-500) {
+	background: @bg-color;
+	display: table;
+	position: absolute;
+	top: 50%;
+	margin-top: -25px;
+	z-index: 110;
+	.size(26px, 26px);
+	border-radius: 50%;
+	cursor: pointer;
+	font-size: 0;
+	text-decoration: none!important;
+	text-align: center;
+	opacity: 0.8!important;
+
+	&:hover {
+		opacity: 1!important;
+	}
+
+	&:active {
+		opacity: 1!important;
+	}
+
+	&[class*="next"] {
+		right: 30px;
+		.transition();
+
+		&:before {
+			.font-ico("\f105");
+			font-size: @font-size-sm;
+			color: @txt-color;
+			vertical-align: middle;
+			display: table-cell;
+			text-align: center;
+			.transition();
+			font-weight: bold;
+		}
+	}
+
+	&[class*="prev"] {
+		left: 30px;
+		.transition();
+
+		&:before {
+			.font-ico("\f104");
+			font-size: @font-size-sm;
+			color: @txt-color;
+			vertical-align: middle;
+			display: table-cell;
+			text-align: center;
+			.transition();
+			font-weight: bold;
+			left: -1px;
+			position: relative;
+		}
+	}
+}
+
+.btn-double-ico(@bg-color: @color-3-500, @font-color: @white, @icon-left: "\f07a", @icon-right: "\f07a") {
+	.btn-reset();
+	border: none;
+	color: @font-color;
+	background: @bg-color;
+	padding: 6px 0 8px;
+	border-radius: 13px 0px 13px 0;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: @font-size-sm;
+	font-weight: @semi-bold;
+	cursor: pointer;
+	box-shadow: 0 -3px 0px darken(@bg-color, 10%) inset;
+	display: inline-block;
+	letter-spacing: 0.6px;
+
+	&:hover,
+	&:focus{
+		color: @font-color;
+		background: lighten(@bg-color, 10%);
+		text-decoration: none;
+		box-shadow: 0 -3px 0px @bg-color inset;
+		outline: none;
+	}
+
+	&:active{
+		color: @font-color;
+		background: darken(@bg-color, 4%);
+		text-decoration: none;
+		box-shadow: 0 2px 0px darken(@bg-color, 15%) inset;
+		outline: none;
+	}
+
+	&:disabled,
+	&.disabled {
+		background: @neutral-1-400;
+		.border(@neutral-1-400,1px);
+		color: @white;
+		box-shadow: none;
+	}
+
+	&:before {
+		.font-ico(@icon-left);
+		line-height: 1;
+		position: relative;
+		margin-left: 14px;
+		margin-right: 15px;
+	}
+
+	&:after {
+		.font-ico(@icon-right);
+		line-height: 1;
+		position: relative;
+		margin-left: 16px;
+		margin-right: 8px;
+	}
+}
+
+.btn-xs() {
+	font-size: @font-size-xxs;
+
+	&:before,
+	&:after {
+		font-size: @font-size-sm;
+	}
+}
+
+.btn-xl(@size) {
+	width: @size;
+	padding: 17px 0;
+	font-size: @font-size-sm;
+}
+
+.btn-xxl(@size) {
+	padding: 24px 0;
+	width: @size;
+	font-size: @font-size-sm;
+}

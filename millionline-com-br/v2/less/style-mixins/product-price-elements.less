@@ -1,0 +1,76 @@
+.old-price(){
+	text-transform: capitalize;
+	font-size: @font-size-xxs;
+	color: @neutral-1-500;
+	line-height: 1;
+	font-style: normal;
+
+	.skuListPrice {
+		font-weight: @normal;
+		margin-left: 14px;
+		font-size: @font-size-xs;
+		text-decoration: line-through;
+	}
+}
+
+.new-price() {
+	font-size: @font-size-xxs;
+	font-style: normal;
+	margin-top: -4px;
+	padding-bottom: 15px;
+
+	.skuBestPrice {
+		font-size: @font-c-2;
+		font-style: normal;
+		font-weight: @bold;
+		margin-left: 8px;
+		position: relative;
+		top: 17px;
+	}
+}
+
+.save-amount() {
+	margin-left: 34px;
+	font-style: normal;
+
+	span {
+		font-size: 0;
+	}
+
+	label {
+		font-weight: @semi-bold;
+		font-size: @font-size-xs;
+		color: @color-1-500;
+	}
+
+	.skuBestInstallmentNumber {
+		&:before {
+			content: "ou em ";
+			font-weight: @normal;
+			font-size: @font-c-3
+		}
+
+		&:after {
+			content: "x";
+		}
+	}
+
+	.skuBestInstallmentValue {
+		&:before {
+			content: " de ";
+			font-weight: @normal;
+			font-size: @font-c-3;
+			margin-left: 1.8px;
+		}
+
+		&:after {
+			content: " s/juros";
+			font-weight: @normal;
+			font-size: @font-c-3;
+		}
+	}
+}
+
+.installments(){
+	font-size: @font-size-xs;
+}
