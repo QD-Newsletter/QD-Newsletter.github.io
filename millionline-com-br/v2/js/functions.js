@@ -8,7 +8,7 @@
 		modal.modal();
 
 		modal.on("hidden.bs.modal", function(){
-			window.parent.postMessage("QdSn1Msg|" + msg, "*");
+			window.parent.postMessage("QdSn2Msg|" + msg, "*");
 		});
 
 		$('.qd-content-coupon').html((location.search.match(/code=([^&]+)/i) || ['']).pop());
