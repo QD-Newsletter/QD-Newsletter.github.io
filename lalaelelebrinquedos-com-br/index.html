@@ -23,30 +23,32 @@
 
                     <form novalidate="1">
                         <div class="row">
-                            <div class="col-md-6 hidden-xs hidden-sm">
-                                <div class="qd-v1-modal-newsletter-image">
-                                    <img src="http://lalaelelebrinquedos.vteximg.com.br/arquivos/qd-newsletter-banner.png" alt="" />
-                                </div>
+                            <div class="col-xs-12 hidden-lg">
+                                <img class="img-responsive qd-news-img-highlight" src="http://lalaelelebrinquedos.vteximg.com.br/arquivos/elemento-brinquedos-prateleira-newsletter-590x377.png" alt="">
                             </div>
 
-                            <div class="col-xs-12 col-md-6">
+                            <div class="col-xs-12 col-lg-6 col-lg-offset-6">
                                 <div class="qd_news">
                                     <div class="form-text">
-                                        <img src="http://lalaelelebrinquedos.vteximg.com.br/arquivos/qd-newsletter-banner-text.png" alt="" />
+                                        <img class="img-responsive" src="http://lalaelelebrinquedos.vteximg.com.br/arquivos/qd-newsletter-banner-text-desconto.png" alt="" />
                                     </div>
 
                                     <div class="form-row">
+                                        <input class="qd_news_name name form-control required" id="qd_name" name="qd_name" placeholder="Digite seu nome" type="text" />
                                         <input class="qd_news_email email form-control required" id="qd_email" name="qd_email" placeholder="Digite seu e-mail" type="text" />
-                                        <button class="qd_news_button" type="submit">OK</button>
+                                        <button class="qd_news_button" type="submit">Receber desconto <i class="fa fa-chevron-right"></i></button>
                                     </div>
                                 </div>
 
                                 <div class="qd_news qd_news_success">
-                                    <h3>Sua inscrição foi realizada com sucesso!</h3>
-                                    <p>Obrigado por se inscrever em nossa newsletter. Em breve você receberá e-mails com nossas ofertas e promoções.</p>
+                                    <h3>Cupom gerado com sucesso!</h3>
+                                    <label class="form-label">
+                                        <input class="qd_success input-type-text-ghost form-control" name="name" type="text" value="NEWS10LALAELELE" onClick="this.setSelectionRange(0, this.value.length);" readonly>
+                                    </label>
+                                    <p>É muito fácil usar seu cupom de 10% de desconto! Antes de finalizar a compra, clique no botão <b>"Adicionar cupom de desconto"</b> e digite o código promocional acima.</p>
 
                                     <div class="form-row">
-                                        <button class="qd_news_button" type="button" data-dismiss="modal">Continuar navegando</button>
+                                        <button class="qd_news_button" type="button" data-dismiss="modal">Fechar <i class="fa fa-times-circle"></i></button>
                                     </div>
                                 </div>
                             </div>
