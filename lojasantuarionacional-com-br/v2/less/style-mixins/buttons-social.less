@@ -1,0 +1,44 @@
+/*
+## LINKS DE REDE SOCIAL.
+```
+<p>.social-link(@size, @ico), é necessário sempre passa o tamanho do icone e o icone.</p>
+<a class="social-link"></a>
+
+```
+*/
+
+.social-link(@size, @ico) {
+	.size(@size, @size);
+	display: inline-block;
+	border-radius: 50%;
+	background: @color-1-500;
+	text-align: center;
+	line-height: @size;
+	position: relative;
+	.transition();
+	margin-right: 3px;
+	text-decoration: none!important;
+
+
+	&:hover {
+		background: lighten(@color-1-500, 10%);
+	}
+
+	
+	&:active,
+	&:focus {
+		background: darken(@color-1-500, 4%);
+	}
+
+	&:before {
+		.font-ico(@ico);
+		font-size: @size - 12px;
+		color: @white;
+		display: block;
+		width: 100%;
+		position: absolute;
+		top: 50%;
+		line-height: @size - 12px;
+		margin-top: -(@size - 12px) / 2px;
+	}
+}

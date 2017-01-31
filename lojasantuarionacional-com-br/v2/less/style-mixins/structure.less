@@ -1,0 +1,30 @@
+@generate-structure-sizes: 7;
+
+.generate-structure-size(@size, @class, @property, @value){
+	@outClass: ~"@{class}-@{size}";
+	@{outClass}{@{property}:@value}
+}
+
+.generate-structure-direction(@acronym, @direction, @property, @min-value, @max-value){
+	@class: ~".@{property}-@{acronym}";
+	@prop: ~"@{property}-@{direction}";
+	@sizes: @generate-structure-sizes - 1;
+	.generate-structure-size(xxs, @class, @prop, @min-value);
+	.generate-structure-size(xs, @class, @prop, round((@max-value - @min-value) / @sizes * 2 ));
+	.generate-structure-size(sm, @class, @prop, round((@max-value - @min-value) / @sizes * 3 ));
+	.generate-structure-size(md, @class, @prop, round((@max-value - @min-value) / @sizes * 4 ));
+	.generate-structure-size(lg, @class, @prop, round((@max-value - @min-value) / @sizes * 5 ));
+	.generate-structure-size(xl, @class, @prop, round((@max-value - @min-value) / @sizes * 6 ));
+	.generate-structure-size(xxl, @class, @prop, @max-value);
+}
+
+.generate-structure(@property, @min-value, @max-value){
+	.generate-structure-direction(t, top, @property, @min-value, @max-value);
+	.generate-structure-direction(top, top, @property, @min-value, @max-value);
+	.generate-structure-direction(b, bottom, @property, @min-value, @max-value);
+	.generate-structure-direction(bottom, bottom, @property, @min-value, @max-value);
+	.generate-structure-direction(l, left, @property, @min-value, @max-value);
+	.generate-structure-direction(left, left, @property, @min-value, @max-value);
+	.generate-structure-direction(r, right, @property, @min-value, @max-value);
+	.generate-structure-direction(right, right, @property, @min-value, @max-value);
+}

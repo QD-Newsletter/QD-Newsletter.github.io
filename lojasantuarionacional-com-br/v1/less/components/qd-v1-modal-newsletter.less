@@ -1,0 +1,61 @@
+.qd-v1-modal-newsletter {
+	color: @black;
+
+	.modal-footer,
+	.modal-header {
+		display: none;
+	}
+
+	.modal-body {
+		padding: 0;
+
+		@media (max-width: @screen-xs-max) {
+			padding: 7px 7px 0;
+		}
+	}
+
+	form {
+		min-height: 499px;
+	}
+
+	.modal-dialog {
+		max-width: 799px;
+		background: url("../../../-arquivos/images/ajax-loader.gif") no-repeat center @white;
+		display: block;
+		border-radius: 0;
+	}
+
+	.modal-content {
+		margin-top: 66px;
+		border: 0;
+		background: url("//santuarionacional.vteximg.com.br/arquivos/qd-newsletter-bg-1.jpg") no-repeat 0 0 @color-1-500;
+		background-color: @color-6-500;
+		width: 100%;
+		min-height: 499px;
+		border-radius: 0;
+		position: relative;
+
+		@media (max-width: @screen-sm-max) {
+			background-size: 1200px;
+			background-position: 17%;
+		}
+
+		@media (max-width: @screen-sm-max) {
+			&:before {
+				content: "";
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				display: block;
+				background: rgba(255, 255, 255, 0.41);
+				width: 100%;
+			}
+		}
+	}
+
+	.qd-v1-modal-newsletter-step-1,
+	.qd-v1-modal-newsletter-step-2,
+	.qd-v1-modal-newsletter-step-3 {
+		display: none;
+	}
+}

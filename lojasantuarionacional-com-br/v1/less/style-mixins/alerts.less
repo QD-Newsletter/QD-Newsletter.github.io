@@ -1,0 +1,27 @@
+/*
+# MIXINS - ESTILO DE ALERTAS
+*/
+
+.alert-ghost(@alert-color){
+	.border(@alert-color,2px);
+	color: @alert-color;
+	padding: 5px;
+	text-align: center;
+	font-size: @font-size-sm;
+	margin: 10px 0;
+	font-weight: @bold;
+	background: transparent;
+}
+
+.alert(@alert-border,@alert-color:@white,@alert-bg:@alert-border){
+	.border(@alert-border,2px);
+	color: @alert-color;
+	padding: 5px;
+	text-align: center;
+	font-size: @font-size-sm;
+	margin: 10px 0;
+	font-weight: @bold;
+	background: @alert-bg;
+}
+
+

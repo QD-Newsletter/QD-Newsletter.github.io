@@ -1,0 +1,130 @@
+/*
+## Estilo Para Formulario
+```
+<h2>ESTILOS PARA INPUT</h2>
+
+<div class="kalei-comments">
+	<p>Função ".input-type-text()"</p>
+	<input class="input-type-text-1" type="text" />
+
+	<p>Função ".input-type-text(@validate)", exibi estilo para validação.</p>
+	<input class="input-type-text-2 success" type="text" />
+	<input class="input-type-text-2 error" type="text" />
+
+	<p>Função ".input-type-text(@sprite, @sprite-possition)", exibi ico ao lado esquerdo do input</p>
+	<input class="input-type-text-3" type="text" />
+
+	<p>Função ".input-type-text-lg()", Define altura de 49px para p elemento.</p>
+	<input class="input-type-text-3 input-type-text-lg" type="text" />
+
+	<p>Função ".input-type-text-sm()", Define altura de  para p elemento.</p>
+	<input class="input-type-text-3 input-type-text-sm" type="text" />
+
+	<p>Função ".input-type-text-xs()", Define altura de  para p elemento.</p>
+	<input class="input-type-text-3 input-type-text-xs" type="text" />
+</div>
+
+<h2>ESTILOS PARA SELECT</h2>
+
+<div class="kalei-comments">
+	<p>Função ".select-type()", destinado a select</p>
+
+	<select class="select-type">
+		<option value="">Selecione</option>
+		<option value="OrderByPriceASC">Menor Preço</option>
+		<option value="OrderByPriceDESC">Maior Preço</option>
+		<option value="OrderByTopSaleDESC">Mais vendidos</option>
+		<option value="OrderByReviewRateDESC">Melhores avaliações</option>
+		<option value="OrderByNameASC">A - Z</option>
+		<option value="OrderByNameDESC">Z - A</option>
+		<option value="OrderByReleaseDateDESC">Data de lançamento</option>
+	</select>
+</div>
+```
+*/
+
+.input-type-text(@bg: @color-2-500) {
+	.border(@neutral-1-300,1px);
+	.transition-atribute(border);
+	font-size: @font-size-xs;
+	color: @neutral-1-500;
+	padding: 0 15px;
+	border-radius: 0px;
+	width: 100%;
+	min-height: 40px;
+	background: @bg;
+
+	&:focus{
+		border-color: @neutral-1-500;
+		outline: none;
+	}
+
+	&:disabled,
+	&.disabled {
+		background: @neutral-1-200;
+		.border(@neutral-1-300,1px);
+		color: @color-6-200;
+	}
+
+	&.error{
+		border-color: @error-1;
+		color: @error-1;
+		background: url("/arquivos/cel.sprite.inputs.png") no-repeat 99% -94px;
+		padding-right: 34px;
+
+		&:disabled,
+		&.disabled {
+			background: url("/arquivos/cel.sprite.inputs.png") no-repeat 99% -94px @neutral-1-200;
+			.border(@neutral-1-300,1px);
+			color: @color-6-200;
+		}
+	}
+
+	&.success{
+		border-color: @success-1;
+		background: url("/arquivos/cel.sprite.inputs.png") no-repeat 99% 0;
+		padding-right: 34px;
+
+		&:disabled,
+		&.disabled {
+			background: url("/arquivos/cel.sprite.inputs.png") no-repeat 99% 0 @neutral-1-200;
+			.border(@neutral-1-300,1px);
+			color: @color-6-200;
+		}
+	}
+}
+
+.input-type-text(@sprite, @sprite-possition, @background: @neutral-1-200) {
+	.input-type-text();
+	padding-left: 36px;
+	background: url(@sprite) no-repeat @sprite-possition @background;
+
+	&:disabled,
+	&.disabled {
+		background: url(@sprite) no-repeat @sprite-possition @background;
+		.border(@neutral-1-300,1px);
+		color: @color-6-200;
+	}
+}
+
+.input-type-text-lg() {
+	.line-height(40px);
+	height: 40px;
+}
+
+.input-type-text-xxl() {
+	.line-height(50px);
+	height: 50px;
+}
+
+.input-type-text-sm() {}
+.input-type-text-xs() {}
+
+.select-type() {
+	.input-type-text();
+	padding: 9px 15px;
+	width: auto;
+	font-size: @font-size-xs;
+	cursor: pointer;
+	min-height: auto;
+}
