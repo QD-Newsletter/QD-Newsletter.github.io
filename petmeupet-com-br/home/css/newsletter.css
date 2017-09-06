@@ -494,6 +494,11 @@ form.qd-loading:before {
 .newsletter-bar-qd-v1.qd-success .newsletter-bar-qd-v1-step-2 {
   display: block;
 }
+@media (min-width: 1200px) {
+  .newsletter-bar-qd-v1.qd-success .newsletter-bar-qd-v1-step-2 .newsletter-bar-qd-v1-input {
+    top: -2px;
+  }
+}
 @media (max-width: 1200px) {
   .newsletter-bar-qd-v1.qd-success .newsletter-bar-qd-v1-text {
     text-align: center;
