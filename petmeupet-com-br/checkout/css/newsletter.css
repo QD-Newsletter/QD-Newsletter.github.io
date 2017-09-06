@@ -11,7 +11,7 @@ form.qd-loading {
 }
 form.qd-loading:before {
   content: "";
-  background: url("../../../-arquivos/images/ajax-loader.gif") no-repeat center center #ffffff;
+  background: url("../../../../-arquivos/images/ajax-loader.gif") no-repeat center center #ffffff;
   position: absolute;
   top: 0;
   left: 0;
