@@ -18,13 +18,11 @@
 	$(function() {
 		// Fomulário
 		var form = $('form');
-		var jsnomeLoja = 'speedmotos';
+		var jsnomeLoja = 'drogariasaopaulo';
 		var entity = 'NL';
 		// Máscaras
-		form.find(".qd_news_phone").mask('(00) 0000-00009');
 		form.find(".qd_news_age").mask('00/00/0000');
 		// Inputs esperados pelo plugin
-		var phoneInput = form.find("[name=qd_phone]");
 		var emailInput = form.find("[name=qd_email]");
 
 		// Não alterar aqui
@@ -42,9 +40,7 @@
 		steps++;
 		if(steps == 2)
 			modal.find('.qd-v1-modal-newsletter-step-2').show();
-		else if(steps == 3)
-			modal.find('.qd-v1-modal-newsletter-step-3').show();
-
+		
 		var form = $('form');
 		form.find('[name=id]').remove();
 		form.append('<input type="hidden" name="id" value="' + (data.Id || '').split('-').pop() + '" />');
