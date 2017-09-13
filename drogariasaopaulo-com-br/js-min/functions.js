@@ -40,6 +40,8 @@
 		steps++;
 		if(steps == 2)
 			modal.find('.qd-v1-modal-newsletter-step-2').show();
+		else if(steps == 3)
+			modal.find('.qd-v1-modal-newsletter-step-3').show();
 		
 		var form = $('form');
 		form.find('[name=id]').remove();
