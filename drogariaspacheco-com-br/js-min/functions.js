@@ -18,7 +18,7 @@
 	$(function() {
 		// Fomulário
 		var form = $('form');
-		var jsnomeLoja = 'drogariasaopaulo';
+		var jsnomeLoja = 'drogariaspacheco';
 		var entity = 'NL';
 		// Máscaras
 		form.find(".qd_news_age").mask('00/00/0000');
