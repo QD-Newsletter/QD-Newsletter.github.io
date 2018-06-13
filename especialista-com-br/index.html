@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <title>NewsLetter</title>
+    <link href="../-arquivos/css/CSS.newsletter-bootstrap-common.css" rel="stylesheet">
+    <link href="css/newsletter.css" rel="stylesheet">
+
+    <script src="//code.jquery.com/jquery-1.12.4.min.js" type="text/javascript"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="../-arquivos/js-min/JS.jquery.validate.min.js"></script>
+    <script src="../-arquivos/js-min/JS.jquery.mask.min.js"></script>
+    <script src="../-arquivos/js-min/jquery.serializeObject.min.js"></script>
+    <script src="js-min/functions.min.js"></script>
+</head>
+<body>
+    <div class="qd-v1-modal-newsletter modal fade">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <span class="content-close" data-dismiss="modal"><i class="fa fa-times"></i></span>
+
+                    <form novalidate="1">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="qd_news">
+                                    <div class="form-text">
+                                        <span class="form-title">Bem vindo(a) à Especialista</span>
+                                        <p class="form-text-content">Seja o primeiro a receber ofertas e descontos exclusivos!</p>
+                                    </div>
+
+                                    <div class="form-row">
+                                        <input class="qd_news_email email form-control required" id="qd_email" name="qd_email" placeholder="Digite aqui o seu e-mail" type="text" />
+                                        <button class="qd_news_button" type="submit">Enviar</button>
+                                    </div>
+                                </div>
+
+                                <div class="qd_news qd_news_success">
+                                    <h3 class="form-title">Obrigado!</h3>
+                                    <p class="form-text-content">Em breve, você receberá ofertas e descontos exclusivos em seu e-mail</p>
+                                    <div class="form-row">
+                                        <button class="qd_news_button" type="button" data-dismiss="modal">Fechar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
