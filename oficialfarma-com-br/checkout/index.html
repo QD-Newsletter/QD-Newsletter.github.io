@@ -19,42 +19,43 @@
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-body">
-                    <span class="content-close" data-dismiss="modal"><i class="fa fa-times"></i></span>
+                    <span class="content-close" data-dismiss="modal"><i class="fa fa-times-circle"></i></span>
 
                     <form novalidate="1">
                         <div class="row">
                             <div class="col-xs-12">
                                 <div class="qd_news">
                                     <div class="form-text">
-                                        <span class="form-subtitle">Agradecemos a preferência</span>
-                                        <h3 class="form-title">Queremos saber mais sobre o seu pet</h3>
-                                    </div>
-
-                                    <div class="form-row input-wrapper">
-                                        <input class="qd_pet_name form-control required" id="qd_pet_name" name="qd_pet_name" placeholder="Qual nome do seu pet?" type="text" />
+                                        <h3 class="form-title">Gostariamos de saber mais sobre você!</h3>
                                     </div>
 
                                     <div class="form-row form-radio-wrapper"> 
-                                        <p class="description">Qual o sexo?</p> 
-                                        <input type="radio" name="qd_pet_genre" id="qd_female" value="Femea" />
-                                        <label for="qd_female">Fêmea</label>
+                                        <p class="description">Faz uso contínuo de produtos manipulados?*</p> 
+                                        <input type="radio" name="qd_manipulated" id="qd_sim" value="true" required="" />
+                                        <label for="qd_sim">Sim</label>
 
-                                        <input type="radio" name="qd_pet_genre" id="qd_male" value="Macho" />
-                                        <label for="qd_male">Macho</label>
+                                        <input type="radio" name="qd_manipulated" id="qd_nao" value="false" required="" />
+                                        <label for="qd_nao">Não</label>
                                     </div>
 
                                     <div class="form-row form-radio-wrapper"> 
-                                        <p class="description">Seu pet é...</p> 
-                                        <input type="radio" name="qd_pet_type" id="qd_cat" value="Gato" />
-                                        <label for="qd_cat">Gato</label>
+                                        <p class="description">Deseja receber novidades e conteúdo de algum departamento?</p> 
 
-                                        <input type="radio" name="qd_pet_type" id="qd_dog" value="Cachorro" />
-                                        <label for="qd_dog">Cachorro</label> 
+                                        <input type="checkbox" name="qd_beauty" id="qd_beauty" value="true" />
+                                        <label for="qd_beauty">Beleza</label>
+
+                                        <input type="checkbox" name="qd_health" id="qd_health" value="true" />
+                                        <label for="qd_health">Saúde</label>
+
+                                        <input type="checkbox" name="qd_performance" id="qd_performance" value="true" />
+                                        <label for="qd_performance">Desempenho físico</label>
+
                                     </div>
 
                                     <div class="form-row input-wrapper no-icon">            
                                         <input type="hidden" value="pet" name="qd_type" />                            
-                                        <button class="qd_news_button" type="submit">Enviar</button>
+                                        <button class="qd_news_button" type="submit">Enviar resposta</button>
+                                        <span></span>
                                     </div>
                                 </div>
 
