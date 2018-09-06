@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <title>Newsletter</title>
+    <link href="../../-arquivos/css/CSS.newsletter-bootstrap-common.css" rel="stylesheet">
+    <link href="css/newsletter.css" rel="stylesheet">
+
+    <script src="//code.jquery.com/jquery-1.12.4.min.js" type="text/javascript"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="../../-arquivos/js-min/JS.jquery.validate.min.js"></script>
+    <script src="../../-arquivos/js-min/JS.jquery.mask.min.js"></script>
+    <script src="../../-arquivos/js-min/jquery.serializeObject.min.js"></script>
+    <script src="js-min/functions.min.js"></script>
+</head>
+<body>
+    <div class="qd-v1-modal-newsletter modal fade">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <span class="content-close" data-dismiss="modal">Fechar <i class="fa fa-times-circle"></i></span>
+
+                    <form novalidate="1">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-6 col-sm-offset-6">
+                                <div class="qd_news">
+                                    <div class="form-text">
+                                        <h3 class="form-title">Gostariamos de saber mais sobre você!</h3>
+                                    </div>
+
+                                    <div class="form-row form-radio-wrapper"> 
+                                        <p class="description">Faz uso contínuo de produtos manipulados?*</p> 
+                                        <input type="radio" name="qd_manipulated" value="true" required="" />
+                                        <label for="qd_sim">Sim</label>
+
+                                        <input type="radio" name="qd_manipulated" value="false" required="" />
+                                        <label for="qd_nao">Não</label>
+                                    </div>
+
+                                    <div class="form-row form-radio-wrapper"> 
+                                        <p class="description">Deseja receber novidades e conteúdo de algum departamento?</p> 
+
+                                        <input type="checkbox" name="qd_beauty" value="true" />
+                                        <label for="qd_beauty">Beleza</label>
+
+                                        <input type="checkbox" name="qd_health" value="true" />
+                                        <label for="qd_health">Saúde</label>
+
+                                        <input type="checkbox" name="qd_performance" value="true" />
+                                        <label for="qd_performance">Desempenho físico</label>
+
+                                    </div>
+
+                                    <div class="form-row input-wrapper no-icon">            
+                                        <input type="hidden" value="finalizacao" name="qd_type" />                            
+                                        <button class="qd_news_button" type="submit">Enviar resposta</button>
+                                        <span>*Resposta necessária para cadastrar o email.</span>
+                                    </div>
+                                </div>
+
+                                <div class="qd_news qd_news_success">
+                                    <h3 class="form-title">Obrigado!</h3>
+                                    <p class="form-text-content">Em breve você receberá muitas novidades!</p>
+                                    <div class="form-row">
+                                        <button class="qd_news_button" type="button" data-dismiss="modal">Fechar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
