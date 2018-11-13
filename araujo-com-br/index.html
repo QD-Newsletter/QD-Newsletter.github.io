@@ -14,21 +14,10 @@
     <script src="../-arquivos/js-min/jquery.serializeObject.min.js"></script>
     <script src="js-min/functions.min.js"></script>
     <script>
-        $('.black-friday-qd-v1-content .btn_news_register').on("click",function() {
-            console.log('clique');
-            var email=$(this).parent().find('input[type=text]').val()||"";
-            window.top.dito.identify({
-                id: window.top.dito.generateID(email),
-                email: email,
-                data: {
-                    origem: 'BlackFriday-2018'
-                }
-            });
-            window.top.dito.track({
-                action: 'black-friday-2018',
-                data: {
-                    email: email
-                }
+        $(function() {
+            $('.black-friday-qd-v1-content .btn_news_register').on("click",function() {
+                var email=$(this).parent().find('input[type=text]').val()||"";
+                window.parent.postMessage({'email':email, 'isNL':true}, "*");
             });
         });
     </script>
