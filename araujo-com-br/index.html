@@ -13,6 +13,14 @@
     <script src="../-arquivos/js-min/JS.jquery.mask.min.js"></script>
     <script src="../-arquivos/js-min/jquery.serializeObject.min.js"></script>
     <script src="js-min/functions.min.js"></script>
+    <script>
+        $(function() {
+            $('.black-friday-qd-v1-content .btn_news_register').on("click",function() {
+                var email=$(this).parent().find('input[type=text]').val()||"";
+                window.parent.postMessage({'email':email, 'isNL':true}, "*");
+            });
+        });
+    </script>
 </head>
 <body>
     <div class="qd-v1-modal-newsletter modal fade">
@@ -30,7 +38,7 @@
                                     </div>
 
                                     <div class="form-text">
-                                        <span class="form-title">A Black Farma esta chegando...</span>            
+                                        <span class="form-title">A Black Farma esta chegando...</span>
                                         <span class="form-text-content">Estamos preparando as melhores ofertas de black friday para você, inscreva-se e receba em primeira mão.</span>
                                     </div>
 
