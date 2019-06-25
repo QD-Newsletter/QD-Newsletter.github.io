@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <title>Newsletter</title>
+    <link href="../../-arquivos/css/CSS.newsletter-bootstrap-common.css" rel="stylesheet">
+    <link href="css/newsletter.css" rel="stylesheet">
+
+    <script src="//code.jquery.com/jquery-1.12.4.min.js" type="text/javascript"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="../../-arquivos/js-min/JS.jquery.validate.min.js"></script>
+    <script src="../../-arquivos/js-min/JS.jquery.mask.min.js"></script>
+    <script src="../../-arquivos/js-min/jquery.serializeObject.min.js"></script>
+    <script src="js-min/functions.min.js"></script>
+</head>
+<body>
+    <div class="qd-v1-modal-newsletter modal fade">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h6> Preencha os dados </h6>
+                </div>
+                <div class="modal-body main-form"> 
+
+                    <form class="QDform" id="form-company-information">
+                        <div class="row">
+                    
+                                <div class="col-xs-12 col-md-6">
+                                    <div class="form-qd-v1-first-wrap form-qd-v1-wrap">
+
+                                        <fieldset class="col-sm-12">
+                                            <label class="label">Tratamento:</label>
+                                            <input name="treatment" value="Sr." type="radio" title="Sr." required> Sr.
+                                            <input name="treatment" value="Sra." type="radio" title="Sra." required>
+                                            Sra.
+                                            <input name="treatment" value="Srta." type="radio" title="Srta." required>
+                                            Srta.
+                                        </fieldset>
+
+                                        <fieldset class="col-sm-6 pr-sm-10">
+                                            <label class="label">Nome</label>
+                                            <input type="text" name="name" title="Nome" required>
+                                        </fieldset>
+
+                                        <fieldset class="col-sm-6">
+                                            <label class="label">Sobrenome</label>
+                                            <input type="text" name="lastname" title="Sobrenome" required>
+                                        </fieldset>
+
+                                        <fieldset class="col-sm-12">
+                                            <label class="label">RG/RNE</label>
+                                            <input type="text" name="rg" title="RG" required>
+                                        </fieldset>
+
+                                        <fieldset class="col-sm-12">
+                                            <label class="label">Orgão Expedidor</label>
+                                            <input type="text" name="issuingAuthority" title="Orgão Expedidor"
+                                                required>
+                                        </fieldset>
+
+                                        <fieldset class="col-sm-12">
+                                            <label class="label">CPF</label>
+                                            <input type="text" name="cpf" title="CPF" required>
+                                        </fieldset>
+
+                                        <fieldset class="col-sm-12">
+                                            <label class="label">Rua</label>
+                                            <input type="text" name="street" title="Rua" required>
+                                        </fieldset>
+
+                                        <fieldset class="col-sm-4">
+                                            <label class="label">Nº</label>
+                                            <input type="text" name="number" title="Nº" required>
+                                        </fieldset>
+
+                                        <fieldset class="col-sm-4">
+                                            <label class="label">Apto.</label>
+                                            <input type="text" name="apartment" title="Apto." required>
+                                        </fieldset>
+
+                                        <fieldset class="col-sm-4">
+                                            <label class="label">CEP</label>
+                                            <input type="text" name="cep" title="CEP" required>
+                                        </fieldset>
+
+                                        <fieldset class="col-sm-6">
+                                            <label class="label">Cidade</label>
+                                            <input type="text" name="city" title="Cidade" required>
+                                        </fieldset>
+
+                                        <fieldset class="col-sm-6">
+                                            <label class="label">Estado</label>
+                                            <select name="state" required>
+                                                <option value="" default>Selecione um estado...</option>
+                                                <option value="AC">Acre</option>
+                                                <option value="AL">Alagoas</option>
+                                                <option value="AP">Amapá</option>
+                                                <option value="AM">Amazonas</option>
+                                                <option value="BA">Bahia</option>
+                                                <option value="CE">Ceará</option>
+                                                <option value="DF">Distrito Federal</option>
+                                                <option value="ES">Espírito Santo</option>
+                                                <option value="GO">Goiás</option>
+                                                <option value="MA">Maranhão</option>
+                                                <option value="MT">Mato Grosso</option>
+                                                <option value="MS">Mato Grosso do Sul</option>
+                                                <option value="MG">Minas Gerais</option>
+                                                <option value="PA">Pará</option>
+                                                <option value="PB">Paraíba</option>
+                                                <option value="PR">Paraná</option>
+                                                <option value="PE">Pernambuco</option>
+                                                <option value="PI">Piauí</option>
+                                                <option value="RJ">Rio de Janeiro</option>
+                                                <option value="RN">Rio Grande do Norte</option>
+                                                <option value="RS">Rio Grande do Sul</option>
+                                                <option value="RO">Rondônia</option>
+                                                <option value="RR">Roraima</option>
+                                                <option value="SC">Santa Catarina</option>
+                                                <option value="SP">São Paulo</option>
+                                                <option value="SE">Sergipe</option>
+                                                <option value="TO">Tocantins</option>
+                                            </select>
+                                        </fieldset>
+
+                                    </div>
+                                </div>
+
+                                <div class="col-xs-12 col-md-6">
+                                    <div class="form-qd-v1-second-wrap form-qd-v1-wrap">
+
+                                        <fieldset class="col-sm-12">
+                                            <label class="label">Celular</label>
+                                            <input type="text" name="cellphone" title="Celular" required>
+                                        </fieldset>
+
+                                        <fieldset class="col-sm-12">
+                                            <label class="label">Telefone Residencial</label>
+                                            <input type="text" name="homePhone" title="Telefone Residencial">
+                                        </fieldset>
+                                        <fieldset class="col-sm-12">
+                                            <label class="label">E-mail</label>
+                                            <input type="email" name="email" title="E-mail" required>
+                                        </fieldset>
+
+                                        <fieldset class="col-sm-12">
+                                            <label class="label">Pessoa politicamente exposta:</label>
+                                            <input name="politicalExposedPerson" value="Sim" type="radio" title="Sim"
+                                                required> Sim
+                                            <input name="politicalExposedPerson" value="Não" type="radio" title="Não"
+                                                required> Não
+                                        </fieldset>
+
+                                        <fieldset class="col-sm-12">
+                                            <label class="label">Ocupa posição pública:</label>
+                                            <input name="occupyPublicPosition" value="Sim" type="radio" title="Sim"
+                                                required> Sim
+                                            <input name="occupyPublicPosition" value="Não" type="radio" title="Não"
+                                                required> Não
+                                        </fieldset>
+
+                                        <fieldset class="col-sm-12">
+                                            <label class="label">Pessoa obrigada:</label>
+                                            <input name="obligedPerson" value="Sim" type="radio" title="Sim"
+                                                required> Sim
+                                            <input name="obligedPerson" value="Não" type="radio" title="Não"
+                                                required> Não
+                                        </fieldset>
+
+                                        <fieldset class="col-sm-12">
+                                            <label class="label">Data de Nascimento</label>
+                                            <input type="text" name="birthdate" title="Data de Nascimento" required>
+                                        </fieldset>
+
+                                        <fieldset class="col-sm-12">
+                                            <label class="label">Aniversário de Casamento</label>
+                                            <input type="text" name="weddingAnniversary" title="Aniversário de Casamento">
+                                        </fieldset>
+                                    </div>
+                                </div>
+
+                                <div class="col-xs-12">
+                                    <div class="col-sm-12 submit-button">
+                                        <input type="submit" value="Enviar" class="form-qd-v1-submit" />
+                                    </div>
+                                </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="modal-body success-message hide">
+                    <div class="qd-form-success">
+                        <i class="fa fa-check-circle"></i>
+                    
+                        <h3 class="form-title">Sucesso!</h3>
+
+                        <div class="form-row">
+                            <button class="qd_news_button" type="button" data-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer"> </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
