@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <title>NewsLetter</title>
+    <link href="../../-arquivos/css/CSS.newsletter-bootstrap-common.css" rel="stylesheet">
+    <link href="css/newsletter.css" rel="stylesheet">
+    <script src="//code.jquery.com/jquery-1.12.4.min.js" type="text/javascript"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="../../-arquivos/js-min/JS.jquery.validate.min.js"></script>
+    <script src="../../-arquivos/js-min/JS.jquery.mask.min.js"></script>
+    <script src="../../-arquivos/js-min/jquery.serializeObject.min.js"></script>
+    <script src="js-min/functions.min.js"></script>
+</head>
+<body>
+    <div class="MZnewsletter qd-v1-modal-newsletter modal fade">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <!-- Botao Fechar -->
+                    <span class="content-close" data-dismiss="modal">
+                        <i class="fa fa-close"></i>
+                    </span>
+                    <!-- // Botao Fechar -->
+                    <form novalidate="1">
+                        <div class="row">
+
+                            <!-- Newsletter Normal -->
+                            <div class="MZn__open qd_news">
+                                <!-- Bloco com Background -->
+                                <div class="col-xs-12 col-md-5 hidden-xs hidden-sm">
+                                    <div class="MZn__content"></div>
+                                </div>
+                                <!-- // Bloco com Background -->
+                                <!-- Bloco com Textos -->
+                                <div class="col-xs-12 col-md-7">
+                                    <div class="MZn__cover">
+                                        <div class="MZn__c--text">
+                                            <img src="//vempraca.vteximg.com.br/arquivos/icone-arrow-newsletter.png" />
+                                            <h3>Fique por dentro das novidades</h3>
+                                            <p>Quer receber novidades, promoções e descontos exclusivos? </p>
+                                        </div>
+                                        <div class="MZn__c--form">
+                                            <input class="qd_news_email email form-control required" id="qd_email"
+                                                name="qd_email" placeholder="Seu e-mail" type="text" />
+                                            <button class="MZc__f--button qd_news_button" type="submit">Enviar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- // Bloco com Textos -->
+                            </div>
+                            <!-- // Newsletter Normal -->
+
+                            <!-- Newsletter Enviada -->
+                            <div class="MZn__success qd_news_success">
+                                <div class="col-xs-12 col-md-5 hidden-xs hidden-sm">
+                                    <div class="row">
+                                        <div class="MZn__content"></div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-7">
+                                    <div class="MZn__cover">
+                                        <div class="MZn__c--text">
+                                            <img src="//vempraca.vteximg.com.br/arquivos/icone-arrow-newsletter.png">
+                                            <h3>Obrigada!</h3>
+                                            <p>Em breve você recebera promoções e novidades por e-mail :)</p>
+                                        </div>
+                                        <div class="MZn__c--button">
+                                            <button class="MZc__b--button qd_news_button" type="button" data-dismiss="modal">Fechar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- // Newsletter Enviada -->
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
