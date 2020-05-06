@@ -156,7 +156,6 @@ form.qd-loading:before {
 }
 @media (max-width: 991px) {
   .qd-v1-modal-newsletter .content-close {
-    top: 7px;
     right: 18px;
   }
 }
@@ -198,12 +197,13 @@ form.qd-loading:before {
 @media (max-width: 991px) {
   .qd-v1-modal-newsletter .form-text img {
     margin-bottom: 9px;
-    margin-top: 0;
+    margin-top: 45px;
   }
 }
 .qd-v1-modal-newsletter .form-content {
   width: 100%;
   background-size: cover;
+  padding: 0 15px;
 }
 @media (max-width: 991px) {
   .qd-v1-modal-newsletter .form-content {
@@ -316,7 +316,7 @@ form.qd-loading:before {
   display: block;
   width: 188px;
   margin: 0 auto;
-  background-color: #F58220;
+  background-color: #f58220;
 }
 @media (max-width: 991px) {
   .qd-v1-modal-newsletter .qd_news_success .qd_news_button {
@@ -341,9 +341,6 @@ form.qd-loading:before {
 .qd-v1-modal-newsletter .qd-form-success .qd_news_success {
   display: block;
 }
-.qd-v1-modal-newsletter .form-row {
-  margin: 0 23px;
-}
 .qd-v1-modal-newsletter .form-row p {
   font-size: 10px !important;
   line-height: 12px !important;
@@ -366,7 +363,6 @@ form.qd-loading:before {
 }
 .qd-v1-modal-newsletter .qd_news_button-group {
   text-align: center;
-  max-width: 297px;
   margin: 0 auto;
 }
 .qd-v1-modal-newsletter .qd_news_button-group li {
@@ -385,10 +381,11 @@ form.qd-loading:before {
   background-color: #FFF;
   box-shadow: none;
   border-radius: 8px;
+  font-size: 14px;
 }
 @media (max-width: 991px) {
   .qd-v1-modal-newsletter input[type="text"] {
-    height: 32px;
+    height: 43px;
   }
 }
 @media (max-width: 992px) {
@@ -398,12 +395,15 @@ form.qd-loading:before {
 }
 .qd-v1-modal-newsletter input[type="text"]::-webkit-input-placeholder {
   color: #424242;
+  font-size: 14px;
 }
 .qd-v1-modal-newsletter input[type="text"]:-moz-placeholder {
   color: #424242;
+  font-size: 14px;
 }
 .qd-v1-modal-newsletter input[type="text"]::-moz-placeholder {
   color: #424242;
+  font-size: 14px;
 }
 .qd-v1-modal-newsletter input[type="text"].error {
   border-color: #c34e4c;
