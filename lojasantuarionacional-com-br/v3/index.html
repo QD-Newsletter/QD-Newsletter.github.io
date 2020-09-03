@@ -210,9 +210,18 @@
                                             <div class="qd-content-news-text-content">
                                                 <img src="//santuarionacional.vteximg.com.br/arquivos/qd-newsletter-text-5.png" alt="Obrigado!" />
 
-                                                <div class="qd-content-news-text">
+                                                <!-- <div class="qd-content-news-text" style="display: none;">
                                                     <p>Utilize o cupom abaixo no final de sua compra e ganhe 10% de desconto</p>
                                                     <p class="qd-news-disc-code">PRIMEIRACOMPRA</p>
+                                                </div> -->
+
+                                                <div class="qd-content-news-text-v2">
+                                                    <p>Seu cupom:</p>
+                                                    <p class="qd-news-disc-code-v2">PRIMEIRACOMPRA</p>
+                                                    <input id="text" type="text" value="PRIMEIRACOMPRA" style="display: none;">
+                                                    <a onclick="clipboard();">Copiar código</a>
+                                                    <script>function clipboard(){var e=document.getElementById("text");e.select(),e.setSelectionRange(0,99999),document.execCommand("copy")}</script>
+                                                    <span> Copie o código do cupom <b>'Adicionar cupom de desconto'</b> no carrinho e ganhe <b> 10% de desconto</b> na primeira compra</span>
                                                 </div>
 
                                                 <span class="qd-btn-close" data-dismiss="modal">FECHAR <i class="fa fa-times-circle" aria-hidden="true"></i></span>
